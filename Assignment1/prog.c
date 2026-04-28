@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#define SIZE 5   // حجم المخزن (عدد الأحرف)
+#define SIZE 5   // حجم المخزن
 
-// مخزن بحرف واحد فقط
 char buffer[SIZE];
 int start = 0;
 int end = -1;
@@ -44,22 +43,22 @@ char dequeue() {
     return value;
 }
 
-// البرنامج الرئيسي
+// التابع الرئيسي
 int main() {
     char name[50];
 
-    // إدخال الاسم
+    // ادخال الاسم
     printf("Enter your name: ");
     scanf("%s", name);
 
     int len = strlen(name);
 
-    // إدخال كل حرف في المخزن
+    // ادخال كل حرف 
     for (int i = 0; i < len; i++) {
         enqueue(name[i]);
     }
 
-    // عرض الناتج + إضافة CE-ESY
+    //CE-ESY عرض الناتج + إضافة
     printf("Result: ");
     while (!isEmpty()) {
         printf("%c", dequeue());
